@@ -1,0 +1,8 @@
+[package]
+name = "ml-experiments-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+include = {name= "ml-rs", path="ml-rs/src"}
+include = {name = "model_alpha", path="model_alpha/src"}
