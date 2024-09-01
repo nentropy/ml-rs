@@ -1,8 +1,25 @@
 [package]
-name = "ml-experiments-rs"
+name = "ml_experiments_rs"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-include = {name= "ml-rs", path="ml-rs/src"}
-include = {name = "model_alpha", path="model_alpha/src"}
+anyhow = "1.0.86"
+linfa-datasets = "0.7.0"
+ml_rs = { path = "./ml_rs" }
+model_alpha = { path = "./model_alpha" }
+tch = "0.17.0"
+
+
+[lib]
+name = "ml_experiments_rs"
+path = "src/lib.rs"
+
+[workspace]
+members = [
+    "./ml_rs",
+    "./model_alpha"
+]
+
+
+
